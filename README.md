@@ -7,4 +7,3 @@ A simple chat online using
 - javascript
 - node.js
 - socket.io
-- css: grid
