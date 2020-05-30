@@ -53,7 +53,7 @@
 
       let author = $('#username').val()
       let message = $('#message').val()
-      let time = new Date().getHours() + ':' + new Date().getMinutes()
+      let time = new Date().getHours() + ':' + ("0" + new Date().getMinutes()).slice(-2)
 
       if (author.length && message.length) {
 
