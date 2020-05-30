@@ -1,0 +1,26 @@
+{
+  "name": "online-chat-flexbox",
+  "version": "1.0.0",
+  "description": "[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Cristian-Menguer/online-chat-flexbox)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cristian-Menguer/online-chat-flexbox.git"
+  },
+  "author": "Cristian Menguer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cristian-Menguer/online-chat-flexbox/issues"
+  },
+  "homepage": "https://github.com/Cristian-Menguer/online-chat-flexbox#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^14.3.0",
+    "socket.io": "^2.3.0"
+  }
+}
