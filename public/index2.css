@@ -3,49 +3,49 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #F2F2F2;
+  width: 100%;
+  height: 100%;
+
 }
 
-.container {
+.grid-container {
+
+  max-width: 700px;
+
+  margin: auto;
 
   display: grid;
-  grid-template: 1fr 7fr 2fr/3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 7fr 2fr;
+
+  padding: 50px;
+
   grid-template-areas:
-    "header header"
-    "main aside"
-    "footer footer";
-
-    margin: 20px auto;  
-    
-    max-width: 700px;
+    "username username"
+    "messages usernames"
+    "message message";
 
 }
 
-header {
-  height: 100%;
-  grid-area: header;
-
+.grid-header {
+  grid-area: username;
 }
 
-main {
-  height: 100%;
-  grid-area: main;
+.grid-main {
+  grid-area: messages;
 }
 
-footer {
-  height: 100%;
-  grid-area: footer;
-
+.grid-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-area: message;
 
 }
 
-aside {
-  height: 100%;
-  grid-area: aside;
+.grid-aside {
+  grid-area: usernames;
 
 }
 
@@ -71,5 +71,4 @@ button {
 .users {
   border: 1px solid #ddd;
   height: 90%;
-  margin: 0 5px 0 5px;
 }

@@ -22,7 +22,7 @@ sockets.on('connection', (socket) => {
         name: ''
     }
 
-    console.log(`> Server => new connection: ${socketId}`)
+    console.log(`> Server => new connection: ${users[socketId].id}`)
 
     // emit only to this socket
     socket.emit('load-messages', messages)
@@ -38,21 +38,18 @@ sockets.on('connection', (socket) => {
     })
 
     socket.on('disconnect', () => {
-        
+
         delete users[socketId]
 
-        if (Object.keys(users).length === 0 ) {
+        if (Object.keys(users).length === 0) {
             console.log('> Server => Reset Chat')
             messages = []
         }
 
     })
-    
+
 })
-
-
 
 server.listen(3000, () => {
     console.log(`> Server listening on port: 3000`)
 })
-
