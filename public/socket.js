@@ -26,6 +26,14 @@ socket.on('new-message', (message) => {
 
 })
 
+socket.on('delete-user', (socketId) => {
+
+    delete users[socketId]
+
+    renderUsers()
+
+})
+
 $('#btSend').click(function() {
 
     const id = socket.id
@@ -53,7 +61,7 @@ $('#btSend').click(function() {
 
 function renderMessage(message) {
 
-    $('.messages').append(`<div class="message">(${message.time}) <strong>${message.author}</strong>: ${message.message}</div>`)
+    $('.messages').append(`<span>(${message.time}) <strong>${message.author}</strong>: ${message.message}</span><br />`)
 
     if (!users[message.id]) {
         users[message.id] = {
@@ -63,6 +71,13 @@ function renderMessage(message) {
     }
     users[message.id].name = message.author
 
+    renderUsers()
+
+    
+
+}
+
+function renderUsers() {
     $('.users').empty()
 
     $('.users').append('<strong>Users List</strong><ul>')
@@ -73,5 +88,5 @@ function renderMessage(message) {
     }
 
     $('.users').append('</ul>')
-
 }
+

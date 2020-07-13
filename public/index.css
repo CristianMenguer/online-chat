@@ -1,75 +1,89 @@
-html,
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
   background-color: #F2F2F2;
+  height: 100%;
 }
 
 .container {
 
-  display: grid;
-  grid-template: 1fr 7fr 2fr/3fr 1fr;
-  grid-template-areas:
-    "header header"
-    "main aside"
-    "footer footer";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
-    margin: 20px auto;  
-    
-    max-width: 700px;
-
+  max-width: 800px;
+  height: 100%;
+  
 }
 
 header {
-  height: 100%;
-  grid-area: header;
+  height: 32px;
+  margin-top: 8px;
+}
 
+header input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
 }
 
 main {
+
+  padding: 8px 0;
+  flex: 1;
+  display: flex;
+  width: 100%;
+  
+}
+
+main div {
+  background-color: #F5F5F5;
+
+  border: 1px solid #ddd;
+  height: 90%;
+  
+}
+
+main .users {
+  width: 200px;
   height: 100%;
-  grid-area: main;
+  margin-left: 8px;
+}
+
+main .messages {
+  flex: 1;
+  height: 100%;  
 }
 
 footer {
-  height: 100%;
-  grid-area: footer;
-
+  height: 64px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  margin-bottom: 8px;
+  
 }
 
-aside {
-  height: 100%;
-  grid-area: aside;
-
-}
-
-input {
+footer input {
   border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 14px;
   width: 100%;
   text-align: center;
 }
 
-button {
+footer button {
   width: 100%;
   font-size: 14px;
-  background: #069;
   text-align: center;
   line-height: 50px;
   font-weight: bold;
   color: #FFF;
-  margin-top: 10px;
-}
-
-.messages,
-.users {
-  border: 1px solid #ddd;
-  height: 90%;
-  margin: 0 5px 0 5px;
+  margin-top: 8px;
 }

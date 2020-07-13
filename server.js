@@ -44,6 +44,9 @@ sockets.on('connection', (socket) => {
         if (Object.keys(users).length === 0) {
             console.log('> Server => Reset Chat')
             messages = []
+        } else {
+            console.log(`> Server => User disconnected: ${socketId}`)
+            socket.broadcast.emit('delete-user', socketId)
         }
 
     })
