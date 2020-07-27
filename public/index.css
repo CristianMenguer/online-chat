@@ -55,11 +55,13 @@ main .users {
   width: 200px;
   height: 100%;
   margin-left: 8px;
+  padding: 8px;
 }
 
 main .messages {
   flex: 1;
   height: 100%;  
+  padding: 8px;
 }
 
 footer {
