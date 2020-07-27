@@ -2,7 +2,7 @@
 
 <h1 align="center">Online Chat</h1>
 <br />
-<img alt="Preview" src"public/images/online-chat.png" >
+<img alt="Preview" src="public/images/online-chat.png" >
 <br />
 <br />
 
